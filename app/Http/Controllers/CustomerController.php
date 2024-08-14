@@ -6,6 +6,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
+
 {
     public function index()
     {
@@ -33,7 +34,6 @@ class CustomerController extends Controller
         $customer->save();
 
         return redirect()->route('customer');
-
     }
 
     public function edit($id)
@@ -44,7 +44,6 @@ class CustomerController extends Controller
         // Pass the customer data to the view
         return view('customeredit', compact('customer'));
     }
-    
 
 
 
@@ -68,6 +67,7 @@ class CustomerController extends Controller
 }
 
 
+
 public function destroy($id)
 {
     $customer = Customer::findOrFail($id);
@@ -75,8 +75,5 @@ public function destroy($id)
 
     return redirect()->route('customer')->with('success', 'Customer deleted successfully!');
 }
-
-
-
 
 }

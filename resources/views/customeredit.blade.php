@@ -9,12 +9,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Hello, Crud!</title>
   </head>
   <body>
       <div class="text-center">
-        <h1>Hello, Crud!</h1>
-        <p>This is a simple CRUD application.</p>
+        <h1>Update Table</h1>
 
       </div>
 
@@ -30,7 +28,7 @@
     @endif
       <form method="POST" action="{{ route('update', $customer->id) }}">
     @csrf
-    @method('PUT') <!-- This line is crucial for method spoofing -->
+    @method('PUT') 
 
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>

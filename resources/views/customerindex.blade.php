@@ -55,12 +55,10 @@
       }
     </style>
 
-    <title>Hello, Crud!</title>
   </head>
   <body>
       <div class="text-center">
-        <h1>Customer Management</h1>
-        <!-- <p>This is a simple CRUD application.</p> -->
+        <h1>Table Management</h1>
         <br>
         <a href="{{ route('customercreate') }}">
           <button class="btn btn-md btn-create">Create Customer</button>
