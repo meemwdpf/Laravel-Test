@@ -7,7 +7,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/form', function () {
+    return view('form');
+});
+
 Route::get('/customer', [CustomerController::class, 'index'])->name('customer'); 
+
+Route::get('/home', [CustomerController::class, 'index'])->name('customer'); 
 
 Route::get('createcustomer', [CustomerController::class, 'create'])->name('customercreate');
 

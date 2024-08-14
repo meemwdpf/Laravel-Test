@@ -17,7 +17,7 @@
       </div>
 
       <div class="container">
-      @if ($errors->any())
+        @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
           @foreach ($errors->all() as $error)
@@ -25,28 +25,28 @@
           @endforeach
         </ul>
       </div>
-    @endif
+        @endif
       <form method="POST" action="{{ route('update', $customer->id) }}">
-    @csrf
-    @method('PUT') 
+        @csrf
+        @method('PUT') 
 
-    <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" name="name" class="form-control" required value="{{ $customer->name }}">
-    </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" required value="{{ $customer->name }}">
+        </div>
 
-    <div class="mb-3">
-        <label for="phone_no" class="form-label">Phone No</label>
-        <input type="text" name="phone_no" class="form-control" required value="{{ $customer->phone_no }}">
-    </div>
+        <div class="mb-3">
+            <label for="phone_no" class="form-label">Phone No</label>
+            <input type="text" name="phone_no" class="form-control" required value="{{ $customer->phone_no }}">
+        </div>
 
-    <div class="mb-3">
-        <label for="address" class="form-label">Address</label>
-        <input type="text" name="address" class="form-control" required value="{{ $customer->address }}">
-    </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" name="address" class="form-control" required value="{{ $customer->address }}">
+        </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
       </div>
 
